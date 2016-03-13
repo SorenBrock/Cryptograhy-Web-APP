@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="S.Brock">
+    <meta name="description" content="Security">
+    <title>Greatest Common Denominator</title>
+    <link href='public/libs/bootstrap/dist/css/bootstrap.min.css' type='text/css' rel="stylesheet">
+    <link href='public/stylesheets/style.css' type='text/css' rel="stylesheet">
+</head>
+
+<body ng-controller="localCtrl" ng-cloak>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="panel panel-login">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <h3>Greatest Common Denominator</h3>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="form-group" style="text-align: center">
+                                    <table 
+                                    <tr><td>
+                                    <input type="text" ng-model="inputA" tabindex="1" class="form-control" placeholder="input a" value="" ng-trim="false"></td><td>
+                                                                    <input type="text" ng-model="inputB" tabindex="2" class="form-control" placeholder="input b" value="" ng-trim="false"></td><td>
+                                    <!--                                    <input type="text" ng-model="messageCode" tabindex="2" class="form-control" placeholder="Code" value="" onkeypress="var key = event.keyCode;return ((key >= 65 && key <= 90) || (key >= 97 && key <= 122));">-->
+
+                                    <input type="text" value="{{gdc()}}" class="form-control" ng-readonly="true"><td>
+                            </tr></table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    <script src="public/libs/jquery/dist/jquery.min.js"></script>
+    <script src="public/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="public/libs/angular/angular.min.js"></script>
+    <script src="public/app/app.js"></script>
+    <script src="public/app/controllers/local.controller.js"></script>
+    <script src="public/javascripts/script.js"></script>
+</body>
+
+</html>

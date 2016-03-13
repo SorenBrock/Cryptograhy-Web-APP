@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="S.Brock">
+    <meta name="description" content="Security">
+    <title>Security Shift Cipher</title>
+    <link href='public/libs/bootstrap/dist/css/bootstrap.min.css' type='text/css' rel="stylesheet">
+    <link href='public/stylesheets/style.css' type='text/css' rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+</head>
+
+<body ng-controller="localCtrl" ng-cloak>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="panel panel-login">
+                    <div class="panel-heading">
+                        <div class="row">
+
+                            <div class="col-xs-12">
+                                <h3>Shift Cipher EnCoder/DeCoder</h3>
+
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <input type="text" ng-model="message" tabindex="1" class="form-control" placeholder="Message" value="" ng-trim="false">
+                                </div>
+                                <hr />
+                                <h4>Shift Cipher</h4>
+                                <div class="form-group">
+                                    <select class="form-control" size="1" ng-model="selectedItem" style="width:70px;">
+
+                                        <option ng:repeat="cipher in shiftCipher" value="{{cipher}}">
+                                            {{cipher}}
+                                        </option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="radio-inline">
+                                        <input type="radio" ng-model="radioBtnIsEncoded" ng-value="true">EnCoded</label>
+                                    <label class="radio-inline">
+                                        <input type="radio" ng-model="radioBtnIsEncoded" ng-value="false">DeCoded</label>
+                                </div>
+                                <div>
+                                    <input type="text" value="{{returnMessage()}}" tabindex="1" class="form-control" ng-readonly="true">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="public/libs/jquery/dist/jquery.min.js"></script>
+    <script src="public/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="public/libs/angular/angular.min.js"></script>
+    <script src="public/app/app.js"></script>
+    <script src="public/app/controllers/local.controller.js"></script>
+    <script src="public/app/services/locals.service.js"></script>
+    <script src="public/javascripts/script.js"></script>
+
+</body>
+
+</html>

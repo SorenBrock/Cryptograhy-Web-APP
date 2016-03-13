@@ -1,0 +1,5 @@
+{
+    "directory": "public/libs",
+    "registry": "https://bower.herokuapp.com",
+    "shorthand-resolver": "git://github.com//.git"
+}
